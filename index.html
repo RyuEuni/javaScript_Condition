@@ -7,17 +7,16 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="root">
-  </div>
-
+  <div id="root"></div>
   <script>
-    let praticeArray = ["피카츄", "라이츄", "파이리"];
-    let studentArray = ["강도현", "아리랑", "김민재"];
-
-    //태그를 코딩으로 마크업해보기
-    let root = document.getElementById('root');
-    root.innerHTML = "<h1>" + praticeArray[0] + "</h1>"; //-> 내가 만든게 아니라 고객의 하드웨어가 조립할 수 있게 시켰다.
-    root.textContent = studentArray[0];
+    //스크립트를 이용해 css 레이아웃 만들어 보기
+    let setData = {
+      tagNames : ["header", "main", "footer"],
+      contentValues : ["머리", "메인", "발꼬락"],
+      colors : ["red", "green", "blue"]
+    }
+    let root = document.getElementById("root");
+    root.innerHTML = "<" + setData.tagNames[0] + ">" + setData.contentValues[0] + "</" + setData.tagNames[0] + ">";
   </script>
 </body>
 </html>
