@@ -7,6 +7,20 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <ul id="menu">
+    <li>items-1</li>
+    <li>items-2</li>
+    <li>items-3</li>
+    <li>items-4</li>
+    <li>items-5</li>
+  </ul>
+
+  <script>
+    let menu = document.getElementById('menu'); //ById에서''로 써주는 이유는 변수와 구분짓기 위함
+    console.dir(menu); //구조를 먼저 봐준다.
+    console.log(menu.children);
+    console.log(menu.children[0]);
+    //검증완료
+  </script>
 </body>
 </html>
