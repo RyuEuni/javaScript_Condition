@@ -21,6 +21,17 @@
     console.log(menu.children);
     console.log(menu.children[0]);
     //검증완료
+    console.dir(menu.children[0].style);
+    
+    for(let i = 0; i < menu.children.length; i++){
+      //if(menu.children[i].textcontent === "items-3")
+      if(i === 2){
+        menu.children[i].style.color = "red";
+      }
+      else{
+        menu.children[i].style.backgroundColor = "gray";
+      }
+    }
   </script>
 </body>
 </html>
