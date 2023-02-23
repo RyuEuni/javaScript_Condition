@@ -7,31 +7,17 @@
   <title>Document</title>
 </head>
 <body>
-  <ul id="menu">
-    <li>items-1</li>
-    <li>items-2</li>
-    <li>items-3</li>
-    <li>items-4</li>
-    <li>items-5</li>
-  </ul>
+  <div id="root">
+  </div>
 
   <script>
-    let menu = document.getElementById('menu'); //ById에서''로 써주는 이유는 변수와 구분짓기 위함
-    console.dir(menu); //구조를 먼저 봐준다.
-    console.log(menu.children);
-    console.log(menu.children[0]);
-    //검증완료
-    console.dir(menu.children[0].style);
-    
-    for(let i = 0; i < menu.children.length; i++){
-      //if(menu.children[i].textcontent === "items-3")
-      if(i === 2){
-        menu.children[i].style.color = "red";
-      }
-      else{
-        menu.children[i].style.backgroundColor = "gray";
-      }
-    }
+    let praticeArray = ["피카츄", "라이츄", "파이리"];
+    let studentArray = ["강도현", "아리랑", "김민재"];
+
+    //태그를 코딩으로 마크업해보기
+    let root = document.getElementById('root');
+    root.innerHTML = "<h1>" + praticeArray[0] + "</h1>";
+    root.textContent = studentArray[0];
   </script>
 </body>
 </html>
