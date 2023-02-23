@@ -7,23 +7,18 @@
   <title>Document</title>
 </head>
 <body>
-  <div></div>
+  <div id="root">
+  </div>
 
   <script>
-    //스크립트를 이용해 css 레이아웃 만들어 보기
-    let h1 = document.createElement('h1');
-    console.dir(h1); // h1이 제대로 생성됐는지 확인
-  
-    h1.textContent = "hello";
-    document.body.appendChild(h1);
-    console.log(document.body); // h1태그 만든게 body 자식으로 제대로 들어갔는지 확인
-  
-    let dd = document.getElementsByTagName('div')[0]; //get으로 가져온 요소들에 appendChild할 땐 [0]처럼 인덱스 처리를 해서 가져와야 한다.
-    let pp = document.createElement('p');
-    pp.textContent = "hello world";
+    let setData = {
+      tagNames : ["header", "main", "footer"],
+      contentValues : ["머리", "메인", "발꼬락"],
+      colors : ["red", "green", "blue"]
+    }
+    let root = document.getElementById("root");
+    root.innerHTML = "<" + setData.tagNames[0] + ">" + setData.contentValues[0] + "</" + setData.tagNames[0] + ">";
     
-    dd.appendChild(pp);
-    console.log(dd);
   </script>
 </body>
 
